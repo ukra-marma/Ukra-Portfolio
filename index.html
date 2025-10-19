@@ -1,507 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ukra Marma | Portfolio</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ukr Marma - Web Developer Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      html {
-        scroll-behavior: smooth;
-      }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-      section {
-        scroll-margin-top: 40px;
-      }
+        body {
+            background: #0a0a0a;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
 
-      .hero-bg {
-        background-image: linear-gradient(
-            rgba(255, 255, 255, 0.92),
-            rgba(255, 255, 255, 0.92)
-          ),
-          url("https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=1600&q=80");
-        background-position: center right;
-        background-size: cover;
-      }
-    </style>
-  </head>
-  <body class="font-sans text-slate-700 bg-slate-50 relative">
-    <aside class="fixed left-6 top-1/2 -translate-y-1/2">
-      <nav class="space-y-3">
-        <a
-          href="#home"
-          class="nav-link flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-500 shadow-lg transform transition-transform duration-200 ease-out hover:scale-110 hover:text-blue-600"
-          aria-label="Home"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            class="h-6 w-6"
-          >
-            <path
-              d="M11.47 3.84a.75.75 0 0 1 1.06 0l8.25 8.25a.75.75 0 0 1-1.06 1.06l-.72-.72v7.32a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75v4.5a.75.75 0 0 1-.75.75h-4.5a.75.75 0 0 1-.75-.75v-7.32l-.72.72a.75.75 0 1 1-1.06-1.06l8.25-8.25Z"
-            />
-          </svg>
-        </a>
-        <a
-          href="#about"
-          class="nav-link flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-500 shadow-lg transform transition-transform duration-200 ease-out hover:scale-110 hover:text-blue-600"
-          aria-label="About"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            class="h-6 w-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.5 20.118a7.5 7.5 0 0 1 15 0A17.933 17.933 0 0 1 12 21.75c-2.645 0-5.167-.582-7.5-1.632Z"
-            />
-          </svg>
-        </a>
-        <a
-          href="#resume"
-          class="nav-link flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-500 shadow-lg transform transition-transform duration-200 ease-out hover:scale-110 hover:text-blue-600"
-          aria-label="Resume"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            class="h-6 w-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959 0 .273-.027.54-.08.799M7.5 21h9M5.25 7.5h13.5m-1.5 0-1.258 12.583A1.125 1.125 0 0 1 13.875 21h-3.75c-.572 0-1.053-.417-1.117-.917L7.75 7.5m11.25 0h1.125c.621 0 1.125.504 1.125 1.125 0 .621-.504 1.125-1.125 1.125H19.5M4.5 9.75H3.375A1.125 1.125 0 0 0 2.25 10.875c0 .621.504 1.125 1.125 1.125H4.5m0 0h1.125m-1.125 0v9m0-9v-1.5"
-            />
-          </svg>
-        </a>
-        <a
-          href="#portfolio"
-          class="nav-link flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-500 shadow-lg transform transition-transform duration-200 ease-out hover:scale-110 hover:text-blue-600"
-          aria-label="Portfolio"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            class="h-6 w-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M2.25 12.75V12A6.75 6.75 0 0 1 9 5.25h6A6.75 6.75 0 0 1 21.75 12v.75m-10.5 0h-.75A2.25 2.25 0 0 0 8.25 15v0a2.25 2.25 0 0 0 2.25 2.25h3a2.25 2.25 0 0 0 2.25-2.25v0a2.25 2.25 0 0 0-2.25-2.25h-.75m-4.5 0h5.25m0 0V12a2.25 2.25 0 0 0-2.25-2.25h-.75A2.25 2.25 0 0 0 8.25 12v.75"
-            />
-          </svg>
-        </a>
-        <a
-          href="#blog"
-          class="nav-link flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-500 shadow-lg transform transition-transform duration-200 ease-out hover:scale-110 hover:text-blue-600"
-          aria-label="Blog"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            class="h-6 w-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M12 6v6h4.5m5.25 4.5A9.75 9.75 0 1 1 11.25 2.25v0A9.75 9.75 0 0 1 21 15.75Z"
-            />
-          </svg>
-        </a>
-        <a
-          href="#contact"
-          class="nav-link flex h-12 w-12 items-center justify-center rounded-full bg-white text-slate-500 shadow-lg transform transition-transform duration-200 ease-out hover:scale-110 hover:text-blue-600"
-          aria-label="Contact"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            class="h-6 w-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.5a2.25 2.25 0 0 1-2.26 0l-7.5-4.5a2.25 2.25 0 0 1-1.07-1.916V6.75"
-            />
-          </svg>
-        </a>
-      </nav>
-    </aside>
+        /* Accent color */
+        .accent { color: #9254da; }
+        .accent-bg { background-color: #9254da; }
+        .accent-border { border-color: #9c39c4; }
 
-    <main class="ml-28">
-      <section
-        id="home"
-        class="hero-bg min-h-screen flex flex-col justify-center gap-8 px-8 py-24 sm:px-24 lg:px-36 xl:px-48 2xl:px-64"
-      >
-        <div>
-          <p class="uppercase text-sm tracking-widest text-blue-600">Hello</p>
-          <h1 class="text-5xl sm:text-6xl font-bold text-slate-800">
-            Ukra Marma
-          </h1>
-          <p class="mt-4 text-xl">
-            I'm a
-            <span class="underline decoration-2 decoration-blue-500"
-              >Web Designer &amp; Developer</span
-            >
-          </p>
-        </div>
-        <div class="flex items-center gap-4 text-slate-500">
-          <button
-            class="rounded-full border border-slate-400 px-6 py-2 text-sm tracking-wide uppercase transition hover:border-blue-600 hover:text-blue-600"
-          >
-            Hire Me
-          </button>
-          <a
-            href="#portfolio"
-            class="rounded-full border border-transparent bg-blue-600 px-6 py-2 text-sm font-semibold uppercase text-white transition hover:bg-blue-700"
-          >
-            View Portfolio
-          </a>
-        </div>
-        <div class="flex items-center gap-5 text-slate-500">
-          <span class="text-xs uppercase tracking-widest">Follow</span>
-          <a href="https://x.com/" class="hover:text-blue-600" aria-label="X">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                d="M4.5 3.75h3.84l4.02 5.49 4.71-5.49h2.73l-5.88 6.84 6.54 9.66H16.62l-4.35-6.33-4.96 6.33H4.38l6.75-7.56L4.5 3.75Zm3.72 1.5H6.72l10.08 13.5h1.59L8.22 5.25Z"
-              />
-            </svg>
-          </a>
-          <a href="https://facebook.com/" class="hover:text-blue-600" aria-label="Facebook">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                d="M13.5 21H9a.75.75 0 0 1-.75-.75v-6h-2a.75.75 0 0 1-.75-.75v-3a.75.75 0 0 1 .75-.75h2v-2a4.25 4.25 0 0 1 4.25-4.25h2.5a.75.75 0 0 1 .75.75v2.75a.75.75 0 0 1-.75.75h-2a.75.75 0 0 0-.75.75V9h2.75a.75.75 0 0 1 .74.86l-.5 3a.75.75 0 0 1-.74.64H12v6.25a.75.75 0 0 0 .75.75h.75V21Z"
-              />
-            </svg>
-          </a>
-          <a href="https://instagram.com/" class="hover:text-blue-600" aria-label="Instagram">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                d="M7.5 3.75c-2.071 0-3.75 1.679-3.75 3.75v9c0 2.071 1.679 3.75 3.75 3.75h9c2.071 0 3.75-1.679 3.75-3.75v-9c0-2.071-1.679-3.75-3.75-3.75h-9Zm7.5 8.25a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-3-4.5a4.5 4.5 0 1 0 0 9 4.5 4.5 0 0 0 0-9Zm5.25-.75a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Z"
-              />
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/" class="hover:text-blue-600" aria-label="LinkedIn">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="currentColor"
-              class="h-5 w-5"
-            >
-              <path
-                d="M6.75 7.5a1.875 1.875 0 1 0 0-3.75 1.875 1.875 0 0 0 0 3.75ZM3.75 9.75A.75.75 0 0 1 4.5 9h4.5a.75.75 0 0 1 .75.75v9.75a.75.75 0 0 1-.75.75H4.5a.75.75 0 0 1-.75-.75V9.75Zm9 0a.75.75 0 0 1 .75-.75h3.564a4.436 4.436 0 0 1 4.436 4.436V19.5a.75.75 0 0 1-.75.75h-3a.75.75 0 0 1-.75-.75v-4.687a1.313 1.313 0 0 0-2.626 0V19.5a.75.75 0 0 1-.75.75h-3a.75.75 0 0 1-.75-.75V9.75Z"
-              />
-            </svg>
-          </a>
-        </div>
-      </section>
+        /* Navigation active state */
+        nav a {
+            position: relative;
+            transition: color 0.3s ease;
+        }
 
-      <section
-        id="about"
-        class="bg-white min-h-screen flex items-center px-8 py-24 sm:px-24 lg:px-36 xl:px-48 2xl:px-64"
-      >
-        <div class="max-w-3xl">
-          <h2 class="text-3xl font-bold text-slate-800">About Me</h2>
-          <p class="mt-6 leading-relaxed text-slate-600">
-            I’m Ukra Marma, a multidisciplinary web designer and front-end
-            developer crafting immersive interfaces for modern brands. From mood
-            boards to motion-rich prototypes and performant code, I translate
-            ideas into experiences that are both intuitive and beautiful.
-          </p>
-          <div class="mt-10 grid gap-8 sm:grid-cols-2">
-            <div class="rounded-2xl border border-slate-200 p-6 shadow-sm">
-              <h3 class="text-lg font-semibold text-slate-800">Experience</h3>
-              <p class="mt-3 text-sm text-slate-600">
-                1+ month building responsive products, design systems, and
-                interactive marketing sites for startups and agencies.
-              </p>
-            </div>
-            <div class="rounded-2xl border border-slate-200 p-6 shadow-sm">
-              <h3 class="text-lg font-semibold text-slate-800">Location</h3>
-              <p class="mt-3 text-sm text-slate-600">
-                Based in Dhaka, Bangladesh. Available for remote collaborations
-                across time zones.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #9254da;
+            transition: width 0.3s ease;
+        }
 
-      <section
-        id="resume"
-        class="min-h-screen bg-slate-100 flex items-center px-8 py-24 sm:px-24 lg:px-36 xl:px-48 2xl:px-64"
-      >
-        <div class="max-w-4xl">
-          <h2 class="text-3xl font-bold text-slate-800">Resume</h2>
-          <div class="mt-10 space-y-10 border-l border-slate-300 pl-10">
-            <div>
-              <span class="text-xs uppercase tracking-widest text-blue-600"
-                >2021 — Present</span
-              >
-              <h3 class="mt-2 text-xl font-semibold text-slate-800">
-                Senior Product Designer · PixelForge Studio
-              </h3>
-              <p class="mt-3 text-sm text-slate-600">
-                Lead UX/UI for SaaS platforms, define component libraries, and
-                partner with engineers to ship delightful multi-device
-                experiences.
-              </p>
-            </div>
-            <div>
-              <span class="text-xs uppercase tracking-widest text-blue-600"
-                >2018 — 2021</span
-              >
-              <h3 class="mt-2 text-xl font-semibold text-slate-800">
-                Front-end Developer · Freelance
-              </h3>
-              <p class="mt-3 text-sm text-slate-600">
-                Delivered conversion-focused landing pages and web apps for
-                e-commerce, educating clients on accessibility and performance.
-              </p>
-            </div>
-            <div>
-              <span class="text-xs uppercase tracking-widest text-blue-600"
-                >2016 — 2018</span
-              >
-              <h3 class="mt-2 text-xl font-semibold text-slate-800">
-                UI Designer · Horizon Creative
-              </h3>
-              <p class="mt-3 text-sm text-slate-600">
-                Shaped brand identities, produced design systems, and created
-                prototypes for marketing teams to validate concepts quickly.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        nav a.active {
+            color: #9254da;
+        }
 
-      <section
-        id="portfolio"
-        class="min-h-screen bg-white flex items-center px-8 py-24 sm:px-24 lg:px-36 xl:px-48 2xl:px-64"
-      >
-        <div class="max-w-5xl">
-          <h2 class="text-3xl font-bold text-slate-800">Selected Work</h2>
-          <p class="mt-4 text-slate-600">
-            Interfaces, dashboards, and marketing sites that blend smooth
-            interactions with thoughtful visual design.
-          </p>
-          <div class="mt-10 grid gap-6 md:grid-cols-3">
-            <a
-              href="#"
-              class="group overflow-hidden rounded-3xl shadow-lg transition hover:-translate-y-1"
-            >
-              <div
-                class="h-52 bg-cover bg-center"
-                style='background-image: url("https://images.unsplash.com/photo-1556740749-887f6717d7e4?auto=format&fit=crop&w=600&q=80");'
-              ></div>
-              <div class="bg-white p-6">
-                <h3 class="text-lg font-semibold text-slate-800 group-hover:text-blue-600">
-                  FinTrack Dashboard
-                </h3>
-                <p class="mt-2 text-sm text-slate-600">
-                  A responsive finance analytics app with interactive charts and
-                  multi-tenant theming.
-                </p>
-              </div>
-            </a>
-            <a
-              href="#"
-              class="group overflow-hidden rounded-3xl shadow-lg transition hover:-translate-y-1"
-            >
-              <div
-                class="h-52 bg-cover bg-center"
-                style='background-image: url("https://images.unsplash.com/photo-1523475472560-d2df97ec485c?auto=format&fit=crop&w=600&q=80");'
-              ></div>
-              <div class="bg-white p-6">
-                <h3 class="text-lg font-semibold text-slate-800 group-hover:text-blue-600">
-                  Lumen UI Kit
-                </h3>
-                <p class="mt-2 text-sm text-slate-600">
-                  Modular design system with ready-to-ship components and motion
-                  guidelines for product teams.
-                </p>
-              </div>
-            </a>
-            <a
-              href="#"
-              class="group overflow-hidden rounded-3xl shadow-lg transition hover:-translate-y-1"
-            >
-              <div
-                class="h-52 bg-cover bg-center"
-                style='background-image: url("https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=600&q=80");'
-              ></div>
-              <div class="bg-white p-6">
-                <h3 class="text-lg font-semibold text-slate-800 group-hover:text-blue-600">
-                  LaunchSite Landing
-                </h3>
-                <p class="mt-2 text-sm text-slate-600">
-                  High-converting product launch page with 3D illustrations and
-                  micro-animations.
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
+        nav a.active::after {
+            width: 100%;
+        }
 
-      <section
-        id="blog"
-        class="min-h-screen bg-slate-100 flex items-center px-8 py-24 sm:px-24 lg:px-36 xl:px-48 2xl:px-64"
-      >
-        <div class="max-w-5xl">
-          <h2 class="text-3xl font-bold text-slate-800">Journal</h2>
-          <div class="mt-10 grid gap-6 md:grid-cols-3">
-            <article class="rounded-3xl bg-white p-6 shadow-sm">
-              <span class="text-xs uppercase tracking-widest text-blue-600"
-                >March 2024</span
-              >
-              <h3 class="mt-3 text-lg font-semibold text-slate-800">
-                Design Systems That Ship
-              </h3>
-              <p class="mt-3 text-sm text-slate-600">
-                How I align design tokens with code to keep growing teams fast and
-                consistent.
-              </p>
-            </article>
-            <article class="rounded-3xl bg-white p-6 shadow-sm">
-              <span class="text-xs uppercase tracking-widest text-blue-600"
-                >February 2024</span
-              >
-              <h3 class="mt-3 text-lg font-semibold text-slate-800">
-                Building Lightning-Fast UIs
-              </h3>
-              <p class="mt-3 text-sm text-slate-600">
-                A checklist for designing with performance in mind—from skeleton
-                states to prefetching.
-              </p>
-            </article>
-            <article class="rounded-3xl bg-white p-6 shadow-sm">
-              <span class="text-xs uppercase tracking-widest text-blue-600"
-                >January 2024</span
-              >
-              <h3 class="mt-3 text-lg font-semibold text-slate-800">
-                Figma to Production Workflow
-              </h3>
-              <p class="mt-3 text-sm text-slate-600">
-                My process for turning prototypes into accessible, component-based
-                front-end code.
-              </p>
-            </article>
-          </div>
-        </div>
-      </section>
+        nav a:hover::after {
+            width: 100%;
+        }
 
-      <section
-        id="contact"
-        class="min-h-screen bg-white flex items-center px-8 py-24 sm:px-24 lg:px-36 xl:px-48 2xl:px-64"
-      >
-        <div class="max-w-3xl">
-          <h2 class="text-3xl font-bold text-slate-800">Let’s Work Together</h2>
-          <p class="mt-4 text-slate-600">
-            Ready to ship something exceptional? Share a few project details and
-            I’ll reply within 48 hours with ideas and next steps.
-          </p>
-          <form class="mt-10 grid gap-6">
-            <div class="grid gap-4 sm:grid-cols-2">
-              <label class="block text-sm font-medium text-slate-700">
-                Name
-                <input
-                  type="text"
-                  placeholder="Your name"
-                  class="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100"
-                />
-              </label>
-              <label class="block text-sm font-medium text-slate-700">
-                Email
-                <input
-                  type="email"
-                  placeholder="you@example.com"
-                  class="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100"
-                />
-              </label>
-            </div>
-            <label class="block text-sm font-medium text-slate-700">
-              Project Details
-              <textarea
-                rows="5"
-                placeholder="Tell me about your project..."
-                class="mt-2 w-full rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-100"
-              ></textarea>
-            </label>
-            <button
-              type="submit"
-              class="w-fit rounded-full bg-blue-600 px-8 py-3 text-sm font-semibold uppercase tracking-wider text-white transition hover:bg-blue-700"
-            >
-              Send Message
-            </button>
-          </form>
-        </div>
-      </section>
-    </main>
-    <script>
-      const sections = Array.from(document.querySelectorAll("main section"));
-      const navLinks = Array.from(document.querySelectorAll(".nav-link"));
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
 
-      const setActiveLink = (id) => {
-        navLinks.forEach((link) => {
-          const targetId = link.getAttribute("href").slice(1);
-          if (targetId === id) {
-            link.classList.add("bg-blue-600", "text-white", "scale-110");
-            link.classList.remove("bg-white", "text-slate-500");
-          } else {
-            link.classList.remove("bg-blue-600", "text-white", "scale-110");
-            link.classList.add("bg-white", "text-slate-500");
-          }
-        });
-      };
+        /* Button styles */
+        .btn-primary {
+            background-color: #9254da;
+            color: #0a0a0a;
+            padding: 12px 32px;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
 
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              setActiveLink(entry.target.id);
+        .btn-primary:hover {
+            background-color: #9254da;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: #9254da;
+            padding: 12px 32px;
+            border: 2px solid #9254da;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-secondary:hover {
+            background-color: #9254da;
+            color: #0a0a0a;
+        }
+
+        /* Scroll reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Card hover effect */
+        .card {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            border-color: #9254da;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(212, 255, 0, 0.1);
+        }
+
+        /* Section spacing */
+        section {
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Hero section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212, 255, 0, 0.1) 0%, transparent 70%);
+            border-radius: 50%;
+            top: -100px;
+            right: -100px;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #a0a0a0;
+            margin-bottom: 40px;
+        }
+
+        /* Form styles */
+        input, textarea {
+            background: #1a1a1a;
+            border: 1px solid #2a2a2a;
+            color: #e0e0e0;
+            padding: 12px 16px;
+            border-radius: 4px;
+            font-family: inherit;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #9254da;
+        }
+
+        /* Stats section */
+        .stat-box {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #9254da;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            color: #a0a0a0;
+            font-size: 0.95rem;
+        }
+
+        /* Portfolio grid */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            aspect-ratio: 1;
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .portfolio-item:hover img {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background: #000;
+            border-top: 1px solid #2a2a2a;
+            padding: 40px 20px;
+            text-align: center;
+            color: #a0a0a0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
             }
-          });
-        },
-        { threshold: 0.6 }
-      );
 
-      sections.forEach((section) => observer.observe(section));
-      setActiveLink(sections[0]?.id || "home");
+            section {
+                padding: 60px 20px;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-black/80 backdrop-blur-md z-50 border-b border-gray-800">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold accent">Ukra Marma</div>
+            <div class="hidden md:flex gap-8">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <button class="md:hidden text-white" onclick="toggleMobileMenu()">☰</button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-black border-t border-gray-800">
+            <a href="#home" class="block px-6 py-3 nav-link">Home</a>
+            <a href="#about" class="block px-6 py-3 nav-link">About</a>
+            <a href="#services" class="block px-6 py-3 nav-link">Services</a>
+            <a href="#portfolio" class="block px-6 py-3 nav-link">Portfolio</a>
+            <a href="#contact" class="block px-6 py-3 nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <p class="text-sm tracking-widest text-gray-500 mb-4">WELCOME TO MY PORTFOLIO</p>
+            <h1>I'm <span class="accent">Ukra Marma</span><br>Web Developer</h1>
+            <p>Creating beautiful and functional web experiences</p>
+            <div class="flex gap-4 justify-center mt-8">
+                <button class="btn-primary">Get Started</button>
+                <button class="btn-secondary">Learn More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-black">
+        <div class="container">
+            <div class="text-center mb-16 reveal">
+                <p class="text-sm tracking-widest accent mb-4">ABOUT ME</p>
+                <h2 class="text-4xl font-bold mb-6">Who I Am Ukra Marma</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="reveal w-1/2 mx-auto">
+                    <img src="./image/ukra.jpg" alt="Rachel Davis" class="rounded-lg w-full ">
+                </div>
+                <div class="reveal">
+                    <p class="text-lg text-gray-300 mb-6">
+                        I'm a passionate web developer with 5+ years of experience creating stunning digital experiences. I specialize in modern web technologies and love turning ideas into reality.
+                    </p>
+                    <p class="text-lg text-gray-300 mb-6">
+                        My journey in web development started with a curiosity about how things work on the internet. Today, I help businesses and startups build beautiful, performant, and user-friendly websites.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6 mt-8">
+                        <div class="card p-6 rounded-lg">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="card p-6 rounded-lg">
+                            <div class="stat-number">30+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-black">
+        <div class="container">
+            <div class="text-center mb-16 reveal">
+                <p class="text-sm tracking-widest accent mb-4">WHAT I OFFER</p>
+                <h2 class="text-4xl font-bold">My Services</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card p-8 rounded-lg reveal">
+                    <div class="text-4xl mb-4">🎨</div>
+                    <h3 class="text-xl font-bold mb-4">Web Design</h3>
+                    <p class="text-gray-400">Creating beautiful and intuitive user interfaces that engage and convert.</p>
+                </div>
+                <div class="card p-8 rounded-lg reveal">
+                    <div class="text-4xl mb-4">⚙️</div>
+                    <h3 class="text-xl font-bold mb-4">Web Development</h3>
+                    <p class="text-gray-400">Building fast, responsive, and scalable web applications with modern technologies.</p>
+                </div>
+                <div class="card p-8 rounded-lg reveal">
+                    <div class="text-4xl mb-4">📱</div>
+                    <h3 class="text-xl font-bold mb-4">Responsive Design</h3>
+                    <p class="text-gray-400">Ensuring your website looks perfect on all devices and screen sizes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="bg-black">
+        <div class="container">
+            <div class="text-center mb-16 reveal">
+                <p class="text-sm tracking-widest accent mb-4">MY WORK</p>
+                <h2 class="text-4xl font-bold">Featured Projects</h2>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item card rounded-lg overflow-hidden reveal">
+                    <img src="./image/download.jpeg" alt="Project 1">
+                </div>
+                <div class="portfolio-item card rounded-lg overflow-hidden reveal">
+                    <img src="./image/images.jpeg" alt="Project 2">
+                </div>
+                <div class="portfolio-item card rounded-lg overflow-hidden reveal">
+                    <img src="./image/img1.jpeg" alt="Project 3">
+                </div>
+                <div class="portfolio-item card rounded-lg overflow-hidden reveal">
+                    <img src="./image/img2.jpeg" alt="Project 4">
+                </div>
+                <div class="portfolio-item card rounded-lg overflow-hidden reveal">
+                    <img src="./image/img3.jpeg" alt="Project 5">
+                </div>
+                <div class="portfolio-item card rounded-lg overflow-hidden reveal">
+                    <img src="./image/download.jpeg" alt="Project 6">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-black">
+        <div class="container">
+            <div class="text-center mb-16 reveal">
+                <p class="text-sm tracking-widest accent mb-4">GET IN TOUCH</p>
+                <h2 class="text-4xl font-bold mb-6">Let's Work Together</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Have a project in mind? I'd love to hear about it. Get in touch and let's create something amazing together.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+                <!-- Contact Form -->
+                <div class="reveal">
+                    <h3 class="text-2xl font-bold mb-8">Send me a message</h3>
+                    <form id="contactForm" class="space-y-6">
+                        <div>
+                            <input type="text" placeholder="Your Name" required class="w-full">
+                        </div>
+                        <div>
+                            <input type="email" placeholder="Your Email" required class="w-full">
+                        </div>
+                        <div>
+                            <input type="text" placeholder="Subject" required class="w-full">
+                        </div>
+                        <div>
+                            <textarea placeholder="Your Message" rows="5" required class="w-full"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="reveal">
+                    <h3 class="text-2xl font-bold mb-8">Contact Information</h3>
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-lg font-semibold accent mb-2">Email</h4>
+                            <a href="mailto:rachel@example.com" class="text-gray-400 hover:accent transition">rachel@example.com</a>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold accent mb-2">Phone</h4>
+                            <a href="tel:+1234567890" class="text-gray-400 hover:accent transition">+1 (234) 567-890</a>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold accent mb-4">Social Media</h4>
+                            <div class="flex gap-4">
+                                <a href="#" class="text-gray-400 hover:accent transition text-xl">LinkedIn</a>
+                                <a href="#" class="text-gray-400 hover:accent transition text-xl">Twitter</a>
+                                <a href="#" class="text-gray-400 hover:accent transition text-xl">GitHub</a>
+                                <a href="#" class="text-gray-400 hover:accent transition text-xl">Instagram</a>
+                            </div>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-semibold accent mb-2">Location</h4>
+                            <p class="text-gray-400">San Francisco, CA</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Rachel Davis. All rights reserved.</p>
+            <p class="text-sm mt-2">Designed & Built with <span class="accent">❤</span></p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Active navigation link
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Scroll reveal animation
+        const reveals = document.querySelectorAll('.reveal');
+
+        function reveal() {
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', reveal);
+        reveal();
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! I will get back to you soon.');
+            this.reset();
+        });
+
+        // Smooth scroll for navigation links
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').slice(1);
+                const targetSection = document.getElementById(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
     </script>
-  </body>
+</body>
 </html>
